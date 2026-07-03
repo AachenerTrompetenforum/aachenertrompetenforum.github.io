@@ -11,12 +11,11 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎺</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="/" class="nav-logo">
@@ -30,6 +29,11 @@
         <a href="kontakt.html">Kontakt</a>
       </div>
       <div class="nav-actions">
+        <div class="nav-lang">
+          <a href="/" class="active">DE</a>
+          <span>/</span>
+          <a href="/en/">EN</a>
+        </div>
         <button class="theme-toggle" id="themeToggle" aria-label="Theme wechseln">
           <span class="icon-sun">☀</span>
           <span class="icon-moon">☽</span>
@@ -54,6 +58,7 @@
       <img src="images/hero-bg.jpg" alt="" />
       <div class="hero-overlay"></div>
     </div>
+    <div class="hero-gold-line"></div>
     <div class="hero-content" data-reveal>
       <span class="hero-eyebrow">Aachener Trompetenforum</span>
       <h1 class="hero-headline">Brass.<br /><em>Refined.</em></h1>
@@ -69,6 +74,35 @@
     </div>
   </section>
 
+  <!-- TICKER: PARTNER & INSTRUMENTE -->
+  <div class="ticker-section">
+    <div class="ticker-label-bar">
+      <div class="ticker-tag">Partner &amp; Instrumente</div>
+      <div class="ticker-track-wrap">
+        <div class="ticker-track">
+          <!-- Doppelt für nahtlose Loop -->
+          <div class="ticker-item"><span class="ticker-dot"></span>Schagerl</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>Yamaha</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>Benge</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>Kühnl &amp; Hoyer</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>Aachener Bank</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>STAWAG</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>AStA RWTH Aachen</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>RWTH Aachen</div>
+          <!-- Duplicate -->
+          <div class="ticker-item"><span class="ticker-dot"></span>Schagerl</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>Yamaha</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>Benge</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>Kühnl &amp; Hoyer</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>Aachener Bank</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>STAWAG</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>AStA RWTH Aachen</div>
+          <div class="ticker-item"><span class="ticker-dot"></span>RWTH Aachen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ÜBER UNS -->
   <section class="section about-section" id="about">
     <div class="container">
@@ -83,8 +117,6 @@
           <img src="images/trumpet-bw.jpg" alt="Trompete in Schwarz-Weiß" />
         </div>
       </div>
-
-      <!-- STATS -->
       <div class="stats-row" data-reveal>
         <div class="stat">
           <span class="stat-number">15+</span>
@@ -112,35 +144,39 @@
   <section class="section news-section">
     <div class="container">
       <div class="section-header" data-reveal>
-        <span class="section-label">Aktuell</span>
-        <h2>News</h2>
+        <div>
+          <span class="section-label">Aktuell</span>
+          <h2>News &amp; Konzerte</h2>
+        </div>
         <a href="news.html" class="section-link">Alle News →</a>
       </div>
       <div class="news-grid">
+        <article class="news-card" data-reveal>
+          <span class="news-tag">🎄 Konzert</span>
+          <span class="news-date">20. Dezember 2025 · 17:00 Uhr</span>
+          <h3>Weihnachtsoratorium Teile I–III</h3>
+          <p>J.S. Bach · Weihnachtsoratorium BWV 248, Teile I bis III — ein festliches Konzert mit dem Aachener Trompetenforum.</p>
+        </article>
+        <article class="news-card" data-reveal>
+          <span class="news-tag">🎭 Festival</span>
+          <span class="news-date">10.–13. Juli 2025</span>
+          <h3>Klangkörperfestival im Theater Aachen</h3>
+          <p>M. Mussorgsky · Bilder einer Ausstellung — für großes Blechbläserensemble. Vier Aufführungen im Theater Aachen.</p>
+        </article>
         <article class="news-card" data-reveal>
           <span class="news-date">15. August 2026</span>
           <h3>Neues Konzertprojekt: Aachen Brass</h3>
           <p>Ein neues Ensembleprojekt zwischen klassischer und zeitgenössischer Blechbläsermusik nimmt Form an.</p>
         </article>
-        <article class="news-card" data-reveal>
-          <span class="news-date">01. Mai 2026</span>
-          <h3>Vorstand neu gewählt</h3>
-          <p>Auf der diesjährigen Mitgliederversammlung wurde der neue Vorstand einstimmig gewählt.</p>
-        </article>
-        <article class="news-card" data-reveal>
-          <span class="news-date">12. März 2026</span>
-          <h3>Masterclass mit Gastdozent</h3>
-          <p>Eine intensive Masterclass für alle Mitglieder — Anmeldung ab sofort möglich.</p>
-        </article>
       </div>
     </div>
   </section>
 
-  <!-- MITGLIEDER (PLACEHOLDER) -->
+  <!-- MITGLIEDER -->
   <section class="section members-section" id="mitglieder">
     <div class="container">
       <div class="members-inner" data-reveal>
-        <span class="section-label">Mitglieder</span>
+        <span class="section-label">Intern</span>
         <h2>Mitgliederbereich</h2>
         <p class="members-sub">Dieser Bereich befindet sich derzeit im Aufbau.</p>
         <div class="members-hint">In Kürze verfügbar — für interne Materialien und Informationen.</div>
@@ -148,18 +184,18 @@
     </div>
   </section>
 
-  <!-- PICCOLO BILD -->
+  <!-- ENSEMBLE / BOOKING TEASER -->
   <section class="section piccolo-section">
     <div class="container">
       <div class="piccolo-grid" data-reveal>
         <div class="piccolo-image">
-          <img src="images/piccolos.jpg" alt="Piccolotrompeten" />
+          <img src="images/hero-bg.jpg" alt="Musiker mit Notenblatt" />
         </div>
         <div class="piccolo-text">
-          <span class="section-label">Ensembles</span>
+          <span class="section-label">Buchung</span>
           <h2>Für jeden Anlass das passende Ensemble.</h2>
           <p>Vom intimen Quartett bis zum großen Festensemble — wir stellen professionelle Blechbläser für Konzerte, Hochzeiten, Firmenveranstaltungen und kulturelle Projekte.</p>
-          <a href="ensembles.html" class="btn-primary">Mehr erfahren</a>
+          <a href="ensembles.html" class="btn-primary">Ensemble anfragen</a>
         </div>
       </div>
     </div>
@@ -168,19 +204,27 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-inner">
+      <div class="footer-top">
         <div class="footer-brand">
           <img src="images/logo.png" alt="Aachener Trompetenforum" class="footer-logo" />
-          <p>Brass. Refined.</p>
+          <p class="footer-tagline">Brass. Refined.</p>
         </div>
-        <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="#about">Über uns</a>
+          <a href="news.html">News &amp; Konzerte</a>
+          <a href="ensembles.html">Ensembles</a>
           <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div class="footer-col">
+          <h4>Rechtliches</h4>
           <a href="impressum.html">Impressum</a>
           <a href="datenschutz.html">Datenschutz</a>
         </div>
-        <div class="footer-copy">
-          © 2026 Aachener Trompetenforum
-        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Aachener Trompetenforum e.V. · Aachen</span>
+        <span>contact@trompetenforum.rwth-aachen.de</span>
       </div>
     </div>
   </footer>

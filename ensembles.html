@@ -7,16 +7,13 @@
   <meta name="description" content="Professionelle Blechbläserensembles für Konzerte, Hochzeiten, Firmenveranstaltungen und kulturelle Projekte." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        <img src="images/logo.png" alt="Aachener Trompetenforum" />
-      </a>
+      <a href="/" class="nav-logo"><img src="images/logo.png" alt="Aachener Trompetenforum" /></a>
       <div class="nav-links">
         <a href="/#about">Über uns</a>
         <a href="news.html">News</a>
@@ -25,19 +22,13 @@
         <a href="kontakt.html">Kontakt</a>
       </div>
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Theme wechseln">
-          <span class="icon-sun">☀</span>
-          <span class="icon-moon">☽</span>
-        </button>
+        <div class="nav-lang"><a href="ensembles.html" class="active">DE</a><span>/</span><a href="/en/ensembles.html">EN</a></div>
+        <button class="theme-toggle" id="themeToggle"><span class="icon-sun">☀</span><span class="icon-moon">☽</span></button>
         <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="nav-mobile" id="navMobile">
-      <a href="/#about">Über uns</a>
-      <a href="news.html">News</a>
-      <a href="ensembles.html">Ensembles</a>
-      <a href="/#mitglieder">Mitglieder</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="/#about">Über uns</a><a href="news.html">News</a><a href="ensembles.html">Ensembles</a><a href="/#mitglieder">Mitglieder</a><a href="kontakt.html">Kontakt</a>
     </div>
   </nav>
 
@@ -49,9 +40,24 @@
     </div>
   </section>
 
-  <section class="section ensembles-section">
+  <!-- BOOKING IMAGE -->
+  <section class="section" style="padding-top:0; background: var(--bg);">
     <div class="container">
+      <div class="piccolo-grid" data-reveal>
+        <div class="piccolo-image">
+          <img src="images/hero-bg.jpg" alt="Musiker mit Notenblatt" />
+        </div>
+        <div class="piccolo-text">
+          <span class="section-label">Warum wir</span>
+          <h2>Musik mit Haltung und Handwerk.</h2>
+          <p>Wir spielen auf Instrumenten führender Hersteller — Schagerl, Yamaha, Benge, Kühnl &amp; Hoyer — und bringen professionelles Niveau auf jede Bühne. Von der kleinen Feier bis zum großen Festakt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="section ensembles-section" style="background: var(--bg-alt);">
+    <div class="container">
       <span class="section-label" data-reveal>Besetzungen</span>
       <div class="ensemble-grid" data-reveal>
         <div class="ensemble-card">
@@ -74,15 +80,9 @@
       <div class="occasions-block" data-reveal>
         <span class="section-label">Anlässe</span>
         <div class="occasions-tags">
-          <span>Konzerte</span>
-          <span>Hochzeiten</span>
-          <span>Firmenveranstaltungen</span>
-          <span>Jubiläen</span>
-          <span>Konferenzen</span>
-          <span>Empfänge</span>
-          <span>Gottesdienste</span>
-          <span>Stadtfeste</span>
-          <span>Kulturprojekte</span>
+          <span>Konzerte</span><span>Hochzeiten</span><span>Firmenveranstaltungen</span>
+          <span>Jubiläen</span><span>Konferenzen</span><span>Empfänge</span>
+          <span>Gottesdienste</span><span>Stadtfeste</span><span>Kulturprojekte</span>
         </div>
       </div>
 
@@ -91,27 +91,35 @@
         <p>Für Verfügbarkeit, Programm und Konditionen — wir melden uns zeitnah.</p>
         <a href="kontakt.html" class="btn-primary">Jetzt anfragen</a>
       </div>
-
     </div>
   </section>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-inner">
+      <div class="footer-top">
         <div class="footer-brand">
           <img src="images/logo.png" alt="Aachener Trompetenforum" class="footer-logo" />
-          <p>Brass. Refined.</p>
+          <p class="footer-tagline">Brass. Refined.</p>
         </div>
-        <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="/#about">Über uns</a>
+          <a href="news.html">News &amp; Konzerte</a>
+          <a href="ensembles.html">Ensembles</a>
           <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div class="footer-col">
+          <h4>Rechtliches</h4>
           <a href="impressum.html">Impressum</a>
           <a href="datenschutz.html">Datenschutz</a>
         </div>
-        <div class="footer-copy">© 2026 Aachener Trompetenforum</div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Aachener Trompetenforum e.V. · Aachen</span>
+        <span>contact@trompetenforum.rwth-aachen.de</span>
       </div>
     </div>
   </footer>
-
   <script src="scripts/main.js"></script>
 </body>
 </html>

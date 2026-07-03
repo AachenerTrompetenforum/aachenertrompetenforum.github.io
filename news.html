@@ -4,19 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>News — Aachener Trompetenforum</title>
-  <meta name="description" content="Aktuelle Nachrichten und Veranstaltungen des Aachener Trompetenforums." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        <img src="images/logo.png" alt="Aachener Trompetenforum" />
-      </a>
+      <a href="/" class="nav-logo"><img src="images/logo.png" alt="Aachener Trompetenforum" /></a>
       <div class="nav-links">
         <a href="/#about">Über uns</a>
         <a href="news.html" class="active">News</a>
@@ -25,26 +21,20 @@
         <a href="kontakt.html">Kontakt</a>
       </div>
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Theme wechseln">
-          <span class="icon-sun">☀</span>
-          <span class="icon-moon">☽</span>
-        </button>
+        <div class="nav-lang"><a href="news.html" class="active">DE</a><span>/</span><a href="/en/news.html">EN</a></div>
+        <button class="theme-toggle" id="themeToggle"><span class="icon-sun">☀</span><span class="icon-moon">☽</span></button>
         <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="nav-mobile" id="navMobile">
-      <a href="/#about">Über uns</a>
-      <a href="news.html">News</a>
-      <a href="ensembles.html">Ensembles</a>
-      <a href="/#mitglieder">Mitglieder</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="/#about">Über uns</a><a href="news.html">News</a><a href="ensembles.html">Ensembles</a><a href="/#mitglieder">Mitglieder</a><a href="kontakt.html">Kontakt</a>
     </div>
   </nav>
 
   <section class="page-hero">
     <div class="container">
       <span class="section-label" data-reveal>Aktuell</span>
-      <h1 data-reveal>News</h1>
+      <h1 data-reveal>News &amp; Konzerte</h1>
     </div>
   </section>
 
@@ -54,17 +44,39 @@
 
         <article class="news-list-item" data-reveal>
           <div class="news-list-meta">
-            <span class="news-date">15. August 2026</span>
+            <span class="news-tag">🎄 Konzert</span>
+            <span class="news-date">20. Dez. 2025 · 17:00 Uhr</span>
           </div>
           <div class="news-list-content">
-            <h2>Neues Konzertprojekt: Aachen Brass</h2>
-            <p>Ein neues Ensembleprojekt zwischen klassischer und zeitgenössischer Blechbläsermusik nimmt Form an. Das Aachener Trompetenforum startet ein ambitioniertes Projekt mit Fokus auf zeitgenössische Kompositionen für Blechbläser — Uraufführungen inklusive.</p>
+            <h2>Weihnachtsoratorium Teile I–III</h2>
+            <p>J.S. Bach · BWV 248 — Das Aachener Trompetenforum präsentiert die ersten drei Teile des Weihnachtsoratoriums in einem festlichen Konzertabend. Ein unvergessliches musikalisches Erlebnis für Advent und Weihnachtszeit.</p>
           </div>
         </article>
 
         <article class="news-list-item" data-reveal>
           <div class="news-list-meta">
-            <span class="news-date">01. Mai 2026</span>
+            <span class="news-tag">🎭 Festival</span>
+            <span class="news-date">10.–13. Juli 2025</span>
+          </div>
+          <div class="news-list-content">
+            <h2>Klangkörperfestival im Theater Aachen</h2>
+            <p>M. Mussorgsky · Bilder einer Ausstellung — für großes Blechbläserensemble. Das Aachener Trompetenforum war Teil des diesjährigen Klangkörperfestivals im Theater Aachen mit vier Aufführungen des bekannten Orchesterwerks in einer eigenen Blechbläserfassung.</p>
+          </div>
+        </article>
+
+        <article class="news-list-item" data-reveal>
+          <div class="news-list-meta">
+            <span class="news-date">15. August 2026</span>
+          </div>
+          <div class="news-list-content">
+            <h2>Neues Konzertprojekt: Aachen Brass</h2>
+            <p>Ein neues Ensembleprojekt zwischen klassischer und zeitgenössischer Blechbläsermusik nimmt Form an. Das Aachener Trompetenforum startet ein ambitioniertes Projekt mit Fokus auf zeitgenössische Kompositionen — Uraufführungen inklusive.</p>
+          </div>
+        </article>
+
+        <article class="news-list-item" data-reveal>
+          <div class="news-list-meta">
+            <span class="news-date">05. Juni 2026</span>
           </div>
           <div class="news-list-content">
             <h2>Vorstand neu gewählt</h2>
@@ -74,11 +86,11 @@
 
         <article class="news-list-item" data-reveal>
           <div class="news-list-meta">
-            <span class="news-date">12. März 2026</span>
+            <span class="news-date">11. April 2026</span>
           </div>
           <div class="news-list-content">
             <h2>Masterclass mit Gastdozent</h2>
-            <p>Eine intensive Masterclass für alle Mitglieder — Anmeldung ab sofort möglich. Details folgen per E-Mail an alle Mitglieder.</p>
+            <p>Eine intensive Masterclass für alle Mitglieder — Anmeldung ab dem 12. März möglich. Weitere Infos und Materialien im Mitgliederbereich.</p>
           </div>
         </article>
 
@@ -88,21 +100,30 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-inner">
+      <div class="footer-top">
         <div class="footer-brand">
           <img src="images/logo.png" alt="Aachener Trompetenforum" class="footer-logo" />
-          <p>Brass. Refined.</p>
+          <p class="footer-tagline">Brass. Refined.</p>
         </div>
-        <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="/#about">Über uns</a>
+          <a href="news.html">News &amp; Konzerte</a>
+          <a href="ensembles.html">Ensembles</a>
           <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div class="footer-col">
+          <h4>Rechtliches</h4>
           <a href="impressum.html">Impressum</a>
           <a href="datenschutz.html">Datenschutz</a>
         </div>
-        <div class="footer-copy">© 2026 Aachener Trompetenforum</div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Aachener Trompetenforum e.V. · Aachen</span>
+        <span>contact@trompetenforum.rwth-aachen.de</span>
       </div>
     </div>
   </footer>
-
   <script src="scripts/main.js"></script>
 </body>
 </html>
