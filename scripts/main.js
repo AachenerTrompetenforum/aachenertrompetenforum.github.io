@@ -68,3 +68,91 @@ function initReveal() {
 }
 
 document.addEventListener('DOMContentLoaded', initReveal);
+
+// --- WORLD MAP TABS & TOOLTIP ---
+function initMap() {
+  const tabs = document.querySelectorAll('.map-tab');
+  const views = document.querySelectorAll('.map-view');
+  const tooltip = document.getElementById('mapTooltip');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.map;
+      tabs.forEach(t => t.classList.remove('active'));
+      views.forEach(v => v.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelector(`.map-view[data-view="${target}"]`)?.classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.map-dot').forEach(dot => {
+    dot.addEventListener('mouseenter', (e) => {
+      if (!tooltip) return;
+      const city = dot.dataset.city;
+      const wrap = dot.closest('.world-map-svg-wrap');
+      const wrapRect = wrap.getBoundingClientRect();
+      const svg = dot.closest('svg');
+      const pt = svg.createSVGPoint();
+      pt.x = dot.cx.baseVal.value;
+      pt.y = dot.cy.baseVal.value;
+      const screenPt = pt.matrixTransform(svg.getScreenCTM());
+
+      tooltip.textContent = city;
+      tooltip.style.left = (screenPt.x - wrapRect.left) + 'px';
+      tooltip.style.top = (screenPt.y - wrapRect.top) + 'px';
+      tooltip.classList.add('visible');
+      wrap.style.position = 'relative';
+      wrap.appendChild(tooltip);
+    });
+    dot.addEventListener('mouseleave', () => {
+      tooltip?.classList.remove('visible');
+    });
+  });
+}
+
+// --- TESTIMONIAL CAROUSEL ---
+function initTestimonials() {
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dotsContainer = document.getElementById('testimonialDots');
+  if (!slides.length || !dotsContainer) return;
+
+  let current = 0;
+  let interval;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'testimonial-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll('.testimonial-dot');
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() {
+    goTo((current + 1) % slides.length);
+  }
+
+  function startAutoplay() {
+    interval = setInterval(next, 5000);
+  }
+
+  startAutoplay();
+
+  dotsContainer.addEventListener('click', () => {
+    clearInterval(interval);
+    startAutoplay();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initMap();
+  initTestimonials();
+});
